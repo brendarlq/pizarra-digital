@@ -13,7 +13,7 @@
           <option value="Laura">Laura</option>
           <option value="Monse">Monse</option>
            <option value="Via">Via</option>
-           <option value="Monse">Brenda</option>
+           <option value="Brenda">Brenda</option>
         </select>
       </div>
       <button class="nes-btn" type="submit">Add</button>
