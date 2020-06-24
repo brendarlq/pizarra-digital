@@ -33,32 +33,37 @@ export default {
         {
           id: 1,
           title: "Go workout",
-          autor: "monse",
-          completed: false
+          autor: "Monse",
+          completed: false,
+          pokemon: "nes-bulbasaur"
         },
         {
           id: 2,
           title: "Do laundry",
           autor: "Via",
-          completed: true
+          completed: true,
+          pokemon: "nes-kirby"
         },
         {
           id: 3,
           title: "Cook food",
-          autor: "laura",
-          completed: false
+          autor: "Laura",
+          completed: false,
+          pokemon: "nes-squirtle"
         },
         {
           id: 4,
           title: "Clean up room",
-          autor: "andrea",
-          completed: true
+          autor: "Andrea",
+          completed: true,
+          pokemon: "nes-mario"
         },
         {
           i: 5,
           title: "Finish work",
-          autor: "brenda",
-          completed: false
+          autor: "Brenda",
+          completed: false,
+          pokemon:"nes-charmander"
         }
       ]
     };

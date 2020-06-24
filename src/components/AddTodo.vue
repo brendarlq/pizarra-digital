@@ -9,9 +9,11 @@
       <div class="nes-select">
         <select required id="autor" v-model="autor">
           <option value disabled selected hidden>Select...</option>
-          <option value="andrea">Andrea</option>
-          <option value="laura">Laura</option>
-          <option value="monse">Monse</option>
+          <option value="Andrea">Andrea</option>
+          <option value="Laura">Laura</option>
+          <option value="Monse">Monse</option>
+           <option value="Via">Via</option>
+           <option value="Monse">Brenda</option>
         </select>
       </div>
       <button class="nes-btn" type="submit">Add</button>
@@ -36,7 +38,8 @@ export default {
         id: uuid.v4,
         title: this.title,
         autor: this.autor,
-        completed: this.position
+        completed: this.position,
+        pokemon: "nes-pokeball"
       };
       this.$emit("add-todo", newTodoObj);
       this.title = "";
