@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs" v-if="todo.position">
       <div class="avatar">
-        <img v-bind:src="require('../assets/' + todo.picture)" class="image" />
+        <img class="nes-avatar is-large image is-rounded" v-bind:src="require('../assets/' + todo.picture)"  />
       </div>
       {{todo.autor}}
     </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="col-xs" v-if="!todo.position">
       <div class="avatar">
-        <img v-bind:src="require('../assets/' + todo.picture)" class="image" />
+        <img v-bind:src="require('../assets/' + todo.picture)" class="nes-avatar is-large image is-rounded" />
       </div>
       {{todo.autor}}
     </div>
@@ -38,9 +38,8 @@ export default {
 </script>
 <style scoped>
 .image {
-  width: 150px;
-  border-radius: 2px;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  transition: width 1s;
+  width: 70%;
+  height: auto;
+  image-rendering: pixelated !important;
 }
 </style>

@@ -7,7 +7,7 @@
       <div class="col-xs">
         <div class="box">
           <div class="avatar">
-            <img v-bind:src="require('../assets/' + mostVoted.picture)" class="image" />
+            <img class="nes-avatar is-large image is-rounded" v-bind:src="require('../assets/' + mostVoted.picture)" />
           </div>
           {{mostVoted.autor}}
         </div>
@@ -30,9 +30,8 @@ export default {
 </script>
 <style scoped>
 .image {
-  width: 150px;
-  border-radius: 2px;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  transition: width 1s;
+ width: 80%;
+  height: auto;
+  image-rendering: pixelated;
 }
 </style>
