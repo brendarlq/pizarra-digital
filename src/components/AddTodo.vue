@@ -45,7 +45,8 @@ export default {
         title: this.title,
         autor: this.autor,
         position: this.position,
-        picture: getPicture(this.autor)
+        picture: getPicture(this.autor),
+        cont: 0
       };
       this.$emit("add-todo", newTodoObj);
       this.title = "";

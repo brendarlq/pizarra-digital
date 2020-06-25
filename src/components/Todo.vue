@@ -11,9 +11,9 @@
       class="nes-balloon is-dark col-xs-9"
     >
       <p>{{ todo.title }}</p>
-      <p>
-        0
-        <i class="nes-icon is-small coin"></i>
+      <p class="col-xs-offset-11" v-on:click="addCont()">
+        {{todo.cont}}
+        <i v-repeat="10" class="nes-icon is-small heart"></i>
       </p>
       <p></p>
     </div>
@@ -28,12 +28,17 @@
 <script>
 export default {
   name: "Todo",
-  props: ["todo"]
+  props: ["todo"],
+  methods: {
+    addCont() {
+      this.todo.cont++;
+    }
+  }
 };
 </script>
 <style scoped>
 .image {
-  width: 200px;
+  width: 150px;
   border-radius: 2px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
   transition: width 1s;

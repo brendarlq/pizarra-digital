@@ -18,10 +18,7 @@
             <div class="box">
               <AddTodo v-on:add-todo="addTodo" />
               <br />
-              <section class="nes-container with-title">
-                <h3 class="title">And the winner is...</h3>
-                <i class="nes-icon trophy is-large"></i>
-              </section>
+              <MostVoted v-bind:mostVoted="findMostVoted(todos)" />
             </div>
           </div>
         </div>
@@ -33,12 +30,14 @@
 <script>
 import "nes.css/css/nes.min.css";
 import Todos from "./components/Todos";
+import MostVoted from "./components/MostVoted";
 import AddTodo from "./components/AddTodo";
 export default {
   name: "app",
   components: {
     Todos,
-    AddTodo
+    AddTodo,
+    MostVoted
   },
   data() {
     return {
@@ -48,51 +47,58 @@ export default {
           title: "Go workout",
           autor: "Monse",
           position: false,
-          picture: "monse.jpg"
+          picture: "monse.jpg",
+          cont: 1
         },
         {
           id: 2,
           title: "Do laundry",
           autor: "Via",
           position: true,
-          picture: "via.jpg"
+          picture: "via.jpg",
+          cont: 1
         },
         {
           i: 6,
           title: "Finish work",
           autor: "Pedro",
           position: false,
-          picture: "pedro.jpg"
+          picture: "pedro.jpg",
+          cont: 1
         },
         {
           id: 3,
           title: "Cook food",
           autor: "Laura",
           position: true,
-          picture: "laura.jpg"
+          picture: "laura.jpg",
+          cont: 1
         },
         {
           id: 4,
           title: "Clean up room",
           autor: "Andrea",
           position: false,
-          picture: "andrea.jpg"
+          picture: "andrea.jpg",
+          cont: 3
         },
         {
           i: 7,
           title: "Finish work",
           autor: "Saúl",
           position: true,
-          picture: "saul.jpg"
+          picture: "saul.jpg",
+          cont: 1
         },
         {
           i: 5,
           title: "Finish work",
           autor: "Brenda",
           position: false,
-          picture: "brenda.jpg"
+          picture: "brenda.jpg",
+          cont: 1
         }
-      ]
+      ],
     };
   },
   methods: {
@@ -101,6 +107,11 @@ export default {
     },
     deleteTodo(todoId) {
       this.todos = this.todos.filter(todo => todo.id !== todoId);
+    },
+    findMostVoted() {
+      let sortedTodos = [...this.todos];
+      sortedTodos = sortedTodos.sort((a, b) => b.cont - a.cont);
+      return sortedTodos[0];
     }
   }
 };
@@ -108,8 +119,5 @@ export default {
 <style>
 #app {
   font-size: 12px !important;
-}
-.col-xs-6 {
-  flex-basis: 50%;
 }
 </style>
