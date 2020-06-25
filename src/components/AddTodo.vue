@@ -16,7 +16,7 @@
             <option value="Monse">Monse</option>
             <option value="Via">Via</option>
             <option value="Brenda">Brenda</option>
-            <option value="Saúl">Saúl</option>
+            <option value="Saul">Saúl</option>
             <option value="Pedro">Pedro</option>
           </select>
         </div>
@@ -45,7 +45,7 @@ export default {
         title: this.title,
         autor: this.autor,
         position: this.position,
-        pokemon: "nes-pokeball"
+        picture: getPicture(this.autor)
       };
       this.$emit("add-todo", newTodoObj);
       this.title = "";
@@ -54,6 +54,32 @@ export default {
     }
   }
 };
+
+function getPicture(autor) {
+  switch (autor) {
+    case "Andrea": {
+      return "andrea.jpg";
+    }
+    case "Via": {
+      return "via.jpg";
+    }
+    case "Monse": {
+      return "monse.jpg";
+    }
+    case "Laura": {
+      return "laura.jpg";
+    }
+    case "Brenda": {
+      return "brenda.jpg";
+    }
+    case "Saul": {
+      return "saul.jpg";
+    }
+    case "Pedro": {
+      return "pedro.jpg";
+    }
+  }
+}
 </script>
 <style scoped>
 </style>

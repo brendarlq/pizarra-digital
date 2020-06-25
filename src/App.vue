@@ -48,35 +48,49 @@ export default {
           title: "Go workout",
           autor: "Monse",
           position: false,
-          pokemon: "nes-bulbasaur"
+          picture: "monse.jpg"
         },
         {
           id: 2,
           title: "Do laundry",
           autor: "Via",
           position: true,
-          pokemon: "nes-kirby"
+          picture: "via.jpg"
+        },
+        {
+          i: 6,
+          title: "Finish work",
+          autor: "Pedro",
+          position: false,
+          picture: "pedro.jpg"
         },
         {
           id: 3,
           title: "Cook food",
           autor: "Laura",
-          position: false,
-          pokemon: "nes-squirtle"
+          position: true,
+          picture: "laura.jpg"
         },
         {
           id: 4,
           title: "Clean up room",
           autor: "Andrea",
+          position: false,
+          picture: "andrea.jpg"
+        },
+        {
+          i: 7,
+          title: "Finish work",
+          autor: "Saúl",
           position: true,
-          pokemon: "nes-mario"
+          picture: "saul.jpg"
         },
         {
           i: 5,
           title: "Finish work",
           autor: "Brenda",
           position: false,
-          pokemon: "nes-charmander"
+          picture: "brenda.jpg"
         }
       ]
     };
