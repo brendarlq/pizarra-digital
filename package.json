@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "nes.css": "^2.3.0",
     "uuid": "^8.2.0",
-    "vue": "^2.6.11"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.8",
